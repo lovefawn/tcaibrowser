@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+        <title>Tutorial</title>
+        <style type="text/css">
+        	* {
+        		font-size: 95%;
+        	}        	
+            body {
+                font-family: sans-serif;
+            }
+            .details {
+            	font-size: 90%;
+            	background-color: #eeeeee;
+            	padding: 1em 1.5em 1em 1.5em;
+            	margin: 0.5em 0 0.5em 0;            	
+            }
+            .center {
+            	text-align: center;
+            }
+            img {
+            	display: block;
+            	margin: 0 auto;
+            }
+        </style>
+    </head>    
+    <body>
+    	<h3 class="center">欢迎使用多彩浏览器</h3>
+    	<ul>
+    	<li>点击左下角的图标，打开侧边栏查看当前打开的标签页.</li>
+    	</ul>
+    	<img src="button.png" />    	
+    	<ul>
+    	<li>或者，你也可以从左边缘向右滑动打开侧边栏.</li>
+    	</ul>
+    	<img src="slide_panel.png" />
+    	<ul>
+    	<li>点击关闭按钮，或者向左（右）滑动关闭标签页.</li>
+    	</ul>
+    	<img src="close_tab.png" />
+	</body>
+</html>
