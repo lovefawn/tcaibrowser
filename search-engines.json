@@ -3,7 +3,7 @@
 		"group": "百度",
 		"items": [
 			{
-				"name": "百度",
+				"name": "百度 中文",
 				"url": "http://www.baidu.com/s?word={searchTerms}"
 			}
 		]
@@ -12,7 +12,7 @@
 		"group": "Google",
 		"items": [
 			{
-				"name": "Google",
+				"name": "Google worldwide",
 				"url": "http://www.google.com/m?q={searchTerms}"
 			},			
 			{
