@@ -4,7 +4,7 @@
 		"items": [
 			{
 				"name": "百度",
-				"url": "http://www.baidu.com/?q={searchTerms}"
+				"url": "http://www.baidu.com/s?word={searchTerms}"
 			}
 		]
 	},
