@@ -2,7 +2,7 @@ h1. Tcai Browser
 
 This project is licensed under the "GPL v3":http://www.gnu.org/licenses/gpl-3.0.en.html license.
 
-本项目基于Tint Browser项目，致力于中国版本的本地化和优化！
+鏈」鐩熀浜嶵int Browser椤圭洰锛岃嚧鍔涗簬涓浗鐗堟湰鐨勬湰鍦板寲鍜屼紭鍖栵紒
 
 
 

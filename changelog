@@ -1,12 +1,12 @@
 1.8:
-- ֧�ֹ��ڳ�����������֧�֣�Ĭ��Ϊ�ٶ�����
-- �Ż���ʼҳ�������²���
+- 支持国内常用搜索引擎支持，默认为百度搜索
+- 优化起始页，采用新布局
 
 1.7.1:
-- ֧���Զ����ֻ���ַ���Զ���
-- �������ء���ťʱ����������
-- ������Ӧ����ͳ��
-- �޸�home���õ�bug
+- 支持自定义手机地址栏自定义
+- 按“返回”按钮时，进行提醒
+- 增加相应数据统计
+- 修复home设置的bug
 
 1.7:
 - New user interface for phones. The legacy one is still available under preferences.

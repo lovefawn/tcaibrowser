@@ -435,7 +435,7 @@ public class ReaderFragment extends Fragment {
 			@Override
 			public void page(int cases, int page) {
 				switch (cases) {
-				case 0:// 滑动页面
+				case 0:// 婊戝姩椤甸潰
 					lst_views.snapToScreen(page);
 					setCurPage(page);
 					new Handler().postDelayed(new Runnable() {
@@ -445,23 +445,23 @@ public class ReaderFragment extends Fragment {
 						}
 					}, 800);
 					break;
-				case 1:// 删除按钮上来
+				case 1:// 鍒犻櫎鎸夐挳涓婃潵
 					delImage.setBackgroundResource(R.drawable.del);
 					delImage.setVisibility(0);
 					delImage.startAnimation(up);
 					break;
-				case 2:// 删除按钮变深
+				case 2:// 鍒犻櫎鎸夐挳鍙樻繁
 					delImage.setBackgroundResource(R.drawable.del_check);
 					Configure.isDelDark = true;
 					break;
-				case 3:// 删除按钮变淡
+				case 3:// 鍒犻櫎鎸夐挳鍙樻贰
 					delImage.setBackgroundResource(R.drawable.del);
 					Configure.isDelDark = false;
 					break;
-				case 4:// 删除按钮下去
+				case 4:// 鍒犻櫎鎸夐挳涓嬪幓
 					delImage.startAnimation(down);
 					break;
-				case 5:// 松手动作
+				case 5:// 鏉炬墜鍔ㄤ綔
 					delImage.startAnimation(down);
 					// Configure.isDelRunning = false;
 					lstPages.get(Configure.curentPage).add(

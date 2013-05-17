@@ -1,4 +1,9 @@
 eclipse.preferences.version=1
 encoding//res/raw/phone_tutorial_html=UTF-8
+encoding//src/org/tcai/reader/models/ReaderItemAdapter.java=UTF-8
+encoding//src/org/tcai/reader/ui/fragments/ReaderFragment.java=UTF-8
 encoding//src/org/tcai/ui/activities/TcaiBrowserActivity.java=UTF-8
 encoding//src/org/tcai/ui/preferences/AddonDetailsFragment.java=UTF-8
+encoding/<project>=UTF-8
+encoding/README.textile=UTF-8
+encoding/changelog=UTF-8
