@@ -50,12 +50,17 @@ public class HomepageSpinnerPreference extends BaseSpinnerPreference {
 			mSpinner.setSelection(0);
 			mEditText.setEnabled(false);
 			mEditText.setText(Constants.URL_ABOUT_START);
-		} else if (currentHomepage.equals(Constants.URL_ABOUT_BLANK)) {
+		}else if(currentHomepage.equals(Constants.URL_ABOUT_RSSSTART)){
 			mSpinner.setSelection(1);
+			mEditText.setEnabled(false);
+			mEditText.setText(Constants.URL_ABOUT_RSSSTART);	
+		}
+		else if (currentHomepage.equals(Constants.URL_ABOUT_BLANK)) {
+			mSpinner.setSelection(2);
 			mEditText.setEnabled(false);
 			mEditText.setText(Constants.URL_ABOUT_BLANK);
 		} else {
-			mSpinner.setSelection(2);
+			mSpinner.setSelection(3);
 			mEditText.setEnabled(true);
 			mEditText.setText(currentHomepage);
 		}
@@ -69,10 +74,14 @@ public class HomepageSpinnerPreference extends BaseSpinnerPreference {
 			mEditText.setEnabled(false);
 			break;
 		case 1:
-			mEditText.setText(Constants.URL_ABOUT_BLANK);
+			mEditText.setText(Constants.URL_ABOUT_RSSSTART);
 			mEditText.setEnabled(false);
 			break;
 		case 2:
+			mEditText.setText(Constants.URL_ABOUT_BLANK);
+			mEditText.setEnabled(false);
+			break;
+		case 3:
 			mEditText.setEnabled(true);
 
 			if ((mEditText.getText().toString()
@@ -109,6 +118,11 @@ public class HomepageSpinnerPreference extends BaseSpinnerPreference {
 						false);
 				break;
 			case 2:
+				editor.putBoolean(
+						Constants.TECHNICAL_PREFERENCE_HOMEPAGE_URL_UPDATE_NEEDED,
+						false);
+				break;
+			case 3:
 				editor.putBoolean(
 						Constants.TECHNICAL_PREFERENCE_HOMEPAGE_URL_UPDATE_NEEDED,
 						true);

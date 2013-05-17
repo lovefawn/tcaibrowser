@@ -21,8 +21,8 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
-import org.tcai.model.BookmarkHistoryItem;
-import org.tcai.model.FolderItem;
+import org.tcai.models.BookmarkHistoryItem;
+import org.tcai.models.FolderItem;
 import org.tcai.utils.Constants;
 
 import android.content.ContentResolver;

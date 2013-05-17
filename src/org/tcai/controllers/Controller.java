@@ -19,7 +19,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.tcai.addons.AddonManager;
-import org.tcai.model.DownloadItem;
+import org.tcai.models.DownloadItem;
 import org.tcai.ui.activities.TcaiBrowserActivity;
 import org.tcai.ui.managers.UIManager;
 

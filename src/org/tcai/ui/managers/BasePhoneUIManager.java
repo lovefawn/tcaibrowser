@@ -76,9 +76,15 @@ public abstract class BasePhoneUIManager extends BaseUIManager {
 	public void addTab(String url, boolean openInBackground,
 			boolean privateBrowsing) {
 		boolean startPage = false;
+		boolean startRssPage = false;
 		if (Constants.URL_ABOUT_START.equals(url)) {
 			url = null;
 			startPage = true;
+		}
+
+		if (Constants.URL_ABOUT_RSSSTART.equals(url)) {
+			url = null;
+			startRssPage = true;
 		}
 
 		PhoneWebViewFragment fragment = new PhoneWebViewFragment();
@@ -94,11 +100,19 @@ public abstract class BasePhoneUIManager extends BaseUIManager {
 				fragment.setStartPageShown(true);
 
 				if (mStartPageFragment == null) {
+
 					createStartPageFragment();
+					setCurrentFragment(mStartPageFragment, sAnimationType);
+
 				}
 
-				setCurrentFragment(mStartPageFragment, sAnimationType);
 				onShowStartPage();
+			} else if (startRssPage) {
+				fragment.setStartPageShown(true);
+				if (mStartRssPageFragment == null) {
+					createStartRssPageFragment();
+					setCurrentFragment(mStartRssPageFragment, sAnimationType);
+				}
 			} else {
 				fragment.setStartPageShown(false);
 				setCurrentFragment(fragment, sAnimationType);
@@ -368,6 +382,8 @@ public abstract class BasePhoneUIManager extends BaseUIManager {
 	}
 
 	protected abstract void createStartPageFragment();
+
+	protected abstract void createStartRssPageFragment();
 
 	protected abstract void updateUrlBar();
 

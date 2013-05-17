@@ -22,7 +22,7 @@ import java.util.Set;
 import org.tcai.R;
 import org.tcai.addons.AddonMenuItem;
 import org.tcai.controllers.Controller;
-import org.tcai.model.DownloadItem;
+import org.tcai.models.DownloadItem;
 import org.tcai.providers.BookmarksWrapper;
 import org.tcai.ui.components.CustomWebView;
 import org.tcai.ui.dialogs.YesNoRememberDialog;
@@ -32,6 +32,8 @@ import org.tcai.ui.managers.UIManager;
 import org.tcai.ui.preferences.PreferencesActivity;
 import org.tcai.utils.ApplicationUtils;
 import org.tcai.utils.Constants;
+
+import com.baidu.mobstat.StatService;
 
 import android.app.ActionBar.OnMenuVisibilityListener;
 import android.app.Activity;
@@ -132,6 +134,9 @@ public class TcaiBrowserActivity extends Activity {
 		super.onCreate(savedInstanceState);
 
 		setContentView(UIFactory.getMainLayout(this));
+		
+		StatService.setSessionTimeOut(100);
+		
 		mUIManager = UIFactory.createUIManager(this);
 
 		getActionBar().setHomeButtonEnabled(true);
@@ -481,7 +486,7 @@ public class TcaiBrowserActivity extends Activity {
 	@Override
 	protected void onPause() {
 		super.onPause();
-
+		StatService.onPause(this);
 		mUIManager.onMainActivityPause();
 		unregisterReceiver(mDownloadsReceiver);
 	}
@@ -489,7 +494,7 @@ public class TcaiBrowserActivity extends Activity {
 	@Override
 	protected void onResume() {
 		super.onResume();
-
+		StatService.onResume(this);
 		mUIManager.onMainActivityResume();
 
 		IntentFilter filter = new IntentFilter();

@@ -34,11 +34,12 @@ import org.tcai.utils.ApplicationUtils;
 import org.tcai.utils.Constants;
 import org.tcai.utils.IOUtils;
 
+import com.baidu.mobstat.StatActivity;
+
 import android.app.ActionBar;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.app.ActionBar.Tab;
-import android.app.Activity;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.DialogInterface.OnClickListener;
@@ -50,7 +51,7 @@ import android.preference.PreferenceManager;
 import android.view.Menu;
 import android.view.MenuItem;
 
-public class BookmarksActivity extends Activity implements
+public class BookmarksActivity extends StatActivity implements
 		IHistoryBookmaksExportListener, IHistoryBookmaksImportListener {
 
 	private static final String EXTRA_SELECTED_TAB_INDEX = "EXTRA_SELECTED_TAB_INDEX";

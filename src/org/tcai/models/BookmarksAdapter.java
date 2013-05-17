@@ -13,7 +13,7 @@
  * GNU General Public License for more details.
  */
 
-package org.tcai.model;
+package org.tcai.models;
 
 import org.tcai.R;
 import org.tcai.providers.BookmarksProvider;

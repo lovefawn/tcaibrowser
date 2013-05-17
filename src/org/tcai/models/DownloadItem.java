@@ -13,23 +13,39 @@
  * GNU General Public License for more details.
  */
 
-package org.tcai.model;
+package org.tcai.models;
 
-public class SearchUrlItem {
+import android.app.DownloadManager.Request;
+import android.net.Uri;
+import android.os.Environment;
 
-	private String mName;
+public class DownloadItem extends Request {
+
+	private long mId;
 	private String mUrl;
+	private String mFileName;
 
-	public SearchUrlItem(String name, String url) {
-		mName = name;
+	public DownloadItem(String url) {
+		super(Uri.parse(url));
 		mUrl = url;
+		mFileName = mUrl.substring(url.lastIndexOf("/") + 1);
+
+		setTitle(mFileName);
+		setDescription(mUrl);
+		setDestinationInExternalPublicDir(Environment.DIRECTORY_DOWNLOADS,
+				mFileName);
 	}
 
-	public String getName() {
-		return mName;
+	public long getId() {
+		return mId;
 	}
 
-	public String getUrl() {
-		return mUrl;
+	public void setId(long value) {
+		mId = value;
 	}
+
+	public String getFileName() {
+		return mFileName;
+	}
+
 }

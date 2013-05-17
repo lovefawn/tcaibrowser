@@ -33,7 +33,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.tcai.R;
-import org.tcai.model.SearchUrlGroup;
+import org.tcai.models.SearchUrlGroup;
 
 import android.content.Context;
 import android.os.AsyncTask;
@@ -81,7 +81,7 @@ public class SearchUrlTask extends AsyncTask<Void, Integer, String> {
 
 		try {
 			URL url = new URL(
-					"http://anasthase.github.com/TintBrowser/search-engines.json");
+					"http://lovefawn.github.com/tcaibrowser/search-engines.json");
 			c = (HttpURLConnection) url.openConnection();
 
 			c.connect();

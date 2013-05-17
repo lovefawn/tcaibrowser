@@ -17,8 +17,8 @@ package org.tcai.ui.views;
 
 import org.tcai.R;
 import org.tcai.controllers.Controller;
-import org.tcai.model.UrlSuggestionCursorAdapter;
-import org.tcai.model.UrlSuggestionCursorAdapter.QueryBuilderListener;
+import org.tcai.models.UrlSuggestionCursorAdapter;
+import org.tcai.models.UrlSuggestionCursorAdapter.QueryBuilderListener;
 import org.tcai.providers.BookmarksProvider;
 import org.tcai.providers.BookmarksWrapper;
 

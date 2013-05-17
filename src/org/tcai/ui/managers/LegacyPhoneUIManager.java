@@ -735,4 +735,10 @@ public class LegacyPhoneUIManager extends BasePhoneUIManager {
 
 	}
 
+	@Override
+	protected void createStartRssPageFragment() {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

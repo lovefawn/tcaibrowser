@@ -18,8 +18,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="org.tcai"
     android:installLocation="auto"    
-    android:versionCode="9"
-    android:versionName="1.7">
+    android:versionCode="11"
+    android:versionName="1.8">
 
     <uses-sdk android:minSdkVersion="14" android:targetSdkVersion="17" />
     
@@ -45,6 +45,11 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <!-- 百度统计必须申明的权限 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission>
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE"></uses-permission>
+	<uses-permission android:name="android.permission.READ_PHONE_STATE"></uses-permission>
+    
     
     <application
         android:icon="@drawable/ic_launcher"
@@ -52,6 +57,11 @@
         android:theme="@style/ApplicationTheme"
         android:allowBackup="true" 
         android:hardwareAccelerated="true">
+        
+        <!-- 您从百度网站获取的APP KEY -->
+		<meta-data android:name="BaiduMobAd_STAT_ID" android:value="11e468fcc1" /> 
+		<!-- 渠道商编号 -->
+		<meta-data android:name="BaiduMobAd_CHANNEL" android:value="baidu Market" />
 
         <activity
             android:label="@string/ApplicationName"

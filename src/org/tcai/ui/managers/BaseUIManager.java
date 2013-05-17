@@ -23,8 +23,9 @@ import java.util.UUID;
 
 import org.tcai.R;
 import org.tcai.controllers.Controller;
-import org.tcai.model.DownloadItem;
+import org.tcai.models.DownloadItem;
 import org.tcai.providers.BookmarksWrapper;
+import org.tcai.reader.ui.fragments.ReaderFragment;
 import org.tcai.tasks.ThumbnailSaver;
 import org.tcai.ui.activities.BookmarksActivity;
 import org.tcai.ui.activities.EditBookmarkActivity;
@@ -93,6 +94,8 @@ public abstract class BaseUIManager implements UIManager {// ,
 	private ValueCallback<Uri> mUploadMessage = null;
 
 	protected StartPageFragment mStartPageFragment = null;
+	
+	protected ReaderFragment mStartRssPageFragment = null;
 
 	private Handler mHandler;
 

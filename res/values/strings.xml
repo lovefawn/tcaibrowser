@@ -216,11 +216,13 @@
     <string name="ClearFormDataMessage">确定要清除所有已保存的表单数据吗?</string>
     <string name="ClearPasswordsMessage">确定要删除所有已保存的密码吗?</string>
     <string name="PreferenceHomepageStart">起始页</string>
+    <string name="PreferenceHomepageRSSStart">RSS订阅</string>
     <string name="PreferenceHomepageBlank">空白页</string>
     <string name="PreferenceHomepageCustom">自定义</string>
 
     <string-array name="HomepageTitles">
         <item>@string/PreferenceHomepageStart</item>
+        <item>@string/PreferenceHomepageRSSStart</item>
         <item>@string/PreferenceHomepageBlank</item>
         <item>@string/PreferenceHomepageCustom</item>
     </string-array>
@@ -236,6 +238,7 @@
     </string-array>
 
     <string name="SearchUrlGoogle">http://www.google.com/m?q={searchTerms}</string>
+    <string name="SearchUrlBaidu">http://www.baidu.com/s?word={searchTerms}</string>
     <string name="PreferenceHeaderAddonsTitle">插件</string>
     <string name="PreferenceHeaderAboutTitle">关于</string>
     <string name="HttpAuthenticationDialogDialogTitle">登录到 %1$s - %2$s</string>
@@ -416,7 +419,7 @@
     <string name="SearchUrlConnecting">Connecting&#8230;</string>
     <string name="SearchUrlParsing">解析结果&#8230;</string>
     <string name="SearchUrlBadResponseCodeMessage">无法链接到搜索引擎库 (response code: %s).</string>
-    <string name="SearchUrlDefault">Google worldwide</string>
+    <string name="SearchUrlDefault">百度</string>
     <string name="SearchUrlCustom">自定义搜索引擎</string>
     <string name="SortBookmarks">书签排序</string>
     <string name="MostUsedSortMode">访问最多</string>

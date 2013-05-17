@@ -16,8 +16,8 @@
 package org.tcai.ui.fragments;
 
 import org.tcai.R;
-import org.tcai.model.BookmarkHistoryItem;
-import org.tcai.model.BookmarksAdapter;
+import org.tcai.models.BookmarkHistoryItem;
+import org.tcai.models.BookmarksAdapter;
 import org.tcai.providers.BookmarksProvider;
 import org.tcai.providers.BookmarksWrapper;
 import org.tcai.ui.managers.UIManager;

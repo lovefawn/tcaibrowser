@@ -19,9 +19,9 @@ import java.util.List;
 import java.util.concurrent.atomic.AtomicReference;
 
 import org.tcai.R;
-import org.tcai.model.SearchUrlAdapter;
-import org.tcai.model.SearchUrlGroup;
-import org.tcai.model.SearchUrlItem;
+import org.tcai.models.SearchUrlAdapter;
+import org.tcai.models.SearchUrlGroup;
+import org.tcai.models.SearchUrlItem;
 import org.tcai.tasks.SearchUrlTask;
 import org.tcai.tasks.SearchUrlTask.ISearchUrlTaskListener;
 import org.tcai.utils.Constants;
@@ -252,7 +252,7 @@ public class SearchEnginePreference extends DialogPreference implements
 
 		if (TextUtils.isEmpty(name)) {
 			String searchUrl = UrlUtils.getRawSearchUrl(getContext());
-			if (getContext().getString(R.string.SearchUrlGoogle).equals(
+			if (getContext().getString(R.string.SearchUrlBaidu).equals(
 					searchUrl)) {
 				name = getContext().getString(R.string.SearchUrlDefault);
 			} else {

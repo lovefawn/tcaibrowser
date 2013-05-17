@@ -16,6 +16,8 @@
 package org.tcai.ui.managers;
 
 import org.tcai.R;
+import org.tcai.reader.ui.fragments.ReaderFragment;
+import org.tcai.reader.ui.fragments.ReaderFragment.OnStartRssPageItemClickedListener;
 import org.tcai.ui.activities.TcaiBrowserActivity;
 import org.tcai.ui.components.BadgedImageView;
 import org.tcai.ui.components.CustomWebView;
@@ -50,6 +52,7 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
+import android.widget.Toast;
 
 public class PhoneUIManager extends BasePhoneUIManager {
 
@@ -64,6 +67,8 @@ public class PhoneUIManager extends BasePhoneUIManager {
 	private TabAdapter mAdapter;
 
 	private SharedPreferences mPreferences;
+
+	private static long mLastToastTime = System.currentTimeMillis();
 
 	static {
 		sAnimationType = AnimationType.NONE;
@@ -212,7 +217,7 @@ public class PhoneUIManager extends BasePhoneUIManager {
 				// Steal event from WebView.
 			}
 		});
-		
+
 		mBack = (ImageView) mActivity.findViewById(R.id.BtnBack);
 		mBack.setOnClickListener(new OnClickListener() {
 			@Override
@@ -302,7 +307,7 @@ public class PhoneUIManager extends BasePhoneUIManager {
 	@Override
 	public void onPageStarted(WebView view, String url, Bitmap favicon) {
 		if (view == getCurrentWebView()) {
-			mProgressBar.setProgress(0);
+			mProgressBar.setProgress(10);
 			mProgressBar.setVisibility(View.VISIBLE);
 
 			mUrlBar.setUrl(url);
@@ -403,6 +408,15 @@ public class PhoneUIManager extends BasePhoneUIManager {
 				if ((currentWebView != null) && (currentWebView.canGoBack())) {
 					currentWebView.goBack();
 					return true;
+				} else {
+
+					if (System.currentTimeMillis() - mLastToastTime > 3000) {
+						Toast toast = Toast.makeText(mActivity, "再点一次返回键退出应用",
+								Toast.LENGTH_SHORT);
+						toast.show();
+						mLastToastTime = System.currentTimeMillis();
+						return true;
+					}
 				}
 			}
 		}
@@ -548,6 +562,19 @@ public class PhoneUIManager extends BasePhoneUIManager {
 						loadUrl(url);
 					}
 				});
+	}
+
+	@Override
+	protected void createStartRssPageFragment() {
+		mStartRssPageFragment = new ReaderFragment();
+		mStartRssPageFragment
+		.setOnStartRssPageItemClickedListener(new OnStartRssPageItemClickedListener() {
+			@Override
+			public void onStartRssPageItemClicked(String url) {
+				loadUrl(url);
+			}
+		});
+
 	}
 
 	private void showTabByIndex(int index, boolean notifyTabSwitched) {

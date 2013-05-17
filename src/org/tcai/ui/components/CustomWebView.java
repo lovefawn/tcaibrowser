@@ -23,7 +23,7 @@ import java.util.UUID;
 import org.tcai.R;
 import org.tcai.addons.AddonMenuItem;
 import org.tcai.controllers.Controller;
-import org.tcai.model.DownloadItem;
+import org.tcai.models.DownloadItem;
 import org.tcai.ui.activities.TcaiBrowserActivity;
 import org.tcai.ui.fragments.BaseWebViewFragment;
 import org.tcai.ui.managers.UIManager;

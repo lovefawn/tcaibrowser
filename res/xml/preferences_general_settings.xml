@@ -106,7 +106,7 @@
             android:summary="@string/PreferenceUITypeSummary"
             android:title="@string/PreferenceUITypeTitle" />
 
-        <ListPreference android:entries="@array/PreferenceNewPhoneLayoutTypeEntryies" android:entryValues="@array/PreferenceNewPhoneLayoutTypeValues" android:key="PREFERENCE_NEWPHONE_LAYOUT_TYPE" android:summary="@string/PreferenceNewPhoneLayoutSummary" android:title="@string/PreferenceNewPhoneLayoutTitle" android:defaultValue="LAYOUT_BOTTOM"/><CheckBoxPreference
+        <ListPreference android:entries="@array/PreferenceNewPhoneLayoutTypeEntryies" android:entryValues="@array/PreferenceNewPhoneLayoutTypeValues" android:key="PREFERENCE_NEWPHONE_LAYOUT_TYPE" android:summary="@string/PreferenceNewPhoneLayoutSummary" android:title="@string/PreferenceNewPhoneLayoutTitle" android:defaultValue="LAYOUT_TOP"/><CheckBoxPreference
             android:defaultValue="true"
             android:key="PREFERENCE_CLOSE_PANEL_ON_NEW_TAB"
             android:summary="@string/PreferenceClosePanelOnNewTabSummary"

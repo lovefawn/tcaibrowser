@@ -18,12 +18,13 @@ package org.tcai.ui.activities;
 import java.util.List;
 
 import org.tcai.R;
-import org.tcai.model.FolderItem;
+import org.tcai.models.FolderItem;
 import org.tcai.providers.BookmarksWrapper;
 import org.tcai.utils.Constants;
 
+import com.baidu.mobstat.StatActivity;
+
 import android.app.ActionBar;
-import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -40,7 +41,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class EditBookmarkActivity extends Activity {
+public class EditBookmarkActivity extends StatActivity {
 
 	private long mId = -1;
 

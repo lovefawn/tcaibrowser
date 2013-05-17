@@ -44,7 +44,7 @@ public class UrlUtils {
 		String currentSearchUrl = PreferenceManager
 				.getDefaultSharedPreferences(context).getString(
 						Constants.PREFERENCE_SEARCH_URL,
-						context.getString(R.string.SearchUrlGoogle));
+						context.getString(R.string.SearchUrlBaidu));
 		if (currentSearchUrl.contains("%s")) {
 			currentSearchUrl = currentSearchUrl.replaceAll("%s",
 					"{searchTerms}");
