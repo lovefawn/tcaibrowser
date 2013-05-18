@@ -20,7 +20,7 @@ import java.util.List;
 
 import org.tcai.addons.executors.BaseActionExecutor;
 import org.tcai.addons.executors.ExecutorFactory;
-import org.tint.addons.framework.Action;
+import org.tcai.addons.framework.Action;
 import org.tcai.ui.components.CustomWebView;
 import org.tcai.ui.managers.UIManager;
 

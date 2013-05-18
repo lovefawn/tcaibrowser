@@ -16,8 +16,8 @@
 package org.tcai.addons.executors;
 
 import org.tcai.R;
-import org.tint.addons.framework.Action;
-import org.tint.addons.framework.AskUserInputAction;
+import org.tcai.addons.framework.Action;
+import org.tcai.addons.framework.AskUserInputAction;
 import org.tcai.controllers.Controller;
 
 import android.app.AlertDialog;

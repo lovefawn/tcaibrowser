@@ -15,8 +15,8 @@
 
 package org.tcai.addons.executors;
 
-import org.tint.addons.framework.Action;
-import org.tint.addons.framework.ShowToastAction;
+import org.tcai.addons.framework.Action;
+import org.tcai.addons.framework.ShowToastAction;
 import android.widget.Toast;
 
 public class ShowToastExecutor extends BaseActionExecutor {

@@ -18,15 +18,15 @@ package org.tcai.addons.executors;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.tint.addons.framework.Action;
-import org.tint.addons.framework.AskUserChoiceAction;
-import org.tint.addons.framework.AskUserConfirmationAction;
-import org.tint.addons.framework.AskUserInputAction;
-import org.tint.addons.framework.LoadUrlAction;
-import org.tint.addons.framework.OpenTabAction;
-import org.tint.addons.framework.ShowDialogAction;
-import org.tint.addons.framework.ShowToastAction;
-import org.tint.addons.framework.TabAction;
+import org.tcai.addons.framework.Action;
+import org.tcai.addons.framework.AskUserChoiceAction;
+import org.tcai.addons.framework.AskUserConfirmationAction;
+import org.tcai.addons.framework.AskUserInputAction;
+import org.tcai.addons.framework.LoadUrlAction;
+import org.tcai.addons.framework.OpenTabAction;
+import org.tcai.addons.framework.ShowDialogAction;
+import org.tcai.addons.framework.ShowToastAction;
+import org.tcai.addons.framework.TabAction;
 
 public class ExecutorFactory {
 

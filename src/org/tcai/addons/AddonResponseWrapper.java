@@ -17,7 +17,7 @@ package org.tcai.addons;
 
 import java.util.List;
 
-import org.tint.addons.framework.Action;
+import org.tcai.addons.framework.Action;
 
 public class AddonResponseWrapper {
 

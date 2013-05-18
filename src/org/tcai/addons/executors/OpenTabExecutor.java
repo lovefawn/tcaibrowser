@@ -15,8 +15,8 @@
 
 package org.tcai.addons.executors;
 
-import org.tint.addons.framework.Action;
-import org.tint.addons.framework.OpenTabAction;
+import org.tcai.addons.framework.Action;
+import org.tcai.addons.framework.OpenTabAction;
 
 import android.text.TextUtils;
 

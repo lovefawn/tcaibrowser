@@ -17,8 +17,8 @@ package org.tcai.addons;
 
 import java.util.List;
 
-import org.tint.addons.framework.Action;
-import org.tint.addons.framework.IAddon;
+import org.tcai.addons.framework.Action;
+import org.tcai.addons.framework.IAddon;
 
 import android.content.ComponentName;
 import android.content.Intent;

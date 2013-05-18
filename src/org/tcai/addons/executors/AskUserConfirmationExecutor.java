@@ -16,8 +16,8 @@
 package org.tcai.addons.executors;
 
 import org.tcai.controllers.Controller;
-import org.tint.addons.framework.Action;
-import org.tint.addons.framework.AskUserConfirmationAction;
+import org.tcai.addons.framework.Action;
+import org.tcai.addons.framework.AskUserConfirmationAction;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnCancelListener;

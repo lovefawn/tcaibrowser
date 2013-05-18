@@ -17,8 +17,8 @@ package org.tcai.addons.executors;
 
 import java.util.UUID;
 
-import org.tint.addons.framework.Action;
-import org.tint.addons.framework.LoadUrlAction;
+import org.tcai.addons.framework.Action;
+import org.tcai.addons.framework.LoadUrlAction;
 import android.text.TextUtils;
 
 public class LoadUrlExecutor extends BaseActionExecutor {

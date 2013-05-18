@@ -20,8 +20,8 @@ import java.util.List;
 
 import org.tcai.R;
 import org.tcai.addons.AddonServiceConnection.AddonServiceConnectionListener;
-import org.tint.addons.framework.Action;
-import org.tint.addons.framework.Callbacks;
+import org.tcai.addons.framework.Action;
+import org.tcai.addons.framework.Callbacks;
 import org.tcai.utils.Constants;
 
 import android.content.Context;

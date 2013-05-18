@@ -16,7 +16,7 @@
 package org.tcai.addons.executors;
 
 import org.tcai.addons.Addon;
-import org.tint.addons.framework.Action;
+import org.tcai.addons.framework.Action;
 import org.tcai.ui.components.CustomWebView;
 import org.tcai.ui.managers.UIManager;
 

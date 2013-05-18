@@ -16,8 +16,8 @@
 package org.tcai.addons.executors;
 
 import org.tcai.utils.ApplicationUtils;
-import org.tint.addons.framework.Action;
-import org.tint.addons.framework.ShowDialogAction;
+import org.tcai.addons.framework.Action;
+import org.tcai.addons.framework.ShowDialogAction;
 
 public class ShowDialogExecutor extends BaseActionExecutor {
 

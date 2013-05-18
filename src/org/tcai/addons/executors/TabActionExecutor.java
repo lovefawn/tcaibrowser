@@ -18,8 +18,8 @@ package org.tcai.addons.executors;
 import java.util.UUID;
 
 import org.tcai.ui.components.CustomWebView;
-import org.tint.addons.framework.Action;
-import org.tint.addons.framework.TabAction;
+import org.tcai.addons.framework.Action;
+import org.tcai.addons.framework.TabAction;
 import android.text.TextUtils;
 
 public class TabActionExecutor extends BaseActionExecutor {
