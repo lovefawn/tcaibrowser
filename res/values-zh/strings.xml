@@ -574,5 +574,6 @@
     <string name="PreferenceHomeButtonSetTitle">Home键设置</string>
     <string name="PreferenceHomeButtonSetText">按Home键时,退出浏览器</string>
     <string name="PreferenceHomeButtonSetDetail">如果选中，则会关闭当前已打开的标签页.</string>
+    <string name="ExitConfirmation">再点一次返回键退出浏览器</string>
     
 </resources>
