@@ -494,6 +494,7 @@
     <string name="PreferenceNewPhoneLayoutTop">地址栏位在顶部</string>
     <string name="PreferenceNewPhoneLayoutBottom">地址栏位于底部</string>
 
+     <!-- 1.8 -->
     <string-array name="PreferenceNewPhoneLayoutTypeEntryies">
         <item>@string/PreferenceNewPhoneLayoutTop</item>
         <item>@string/PreferenceNewPhoneLayoutBottom</item>
@@ -502,5 +503,6 @@
         <item>LAYOUT_TOP</item>
         <item>LAYOUT_BOTTOM</item>
     </string-array>
+    <string name="ExitTips">再点一次返回键退出浏览器</string>
 
 </resources>

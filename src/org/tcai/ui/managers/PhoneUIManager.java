@@ -411,7 +411,7 @@ public class PhoneUIManager extends BasePhoneUIManager {
 				} else {
 
 					if (System.currentTimeMillis() - mLastToastTime > 3000) {
-						Toast toast = Toast.makeText(mActivity, "再点一次返回键退出应用",
+						Toast toast = Toast.makeText(mActivity, R.string.ExitTips,
 								Toast.LENGTH_SHORT);
 						toast.show();
 						mLastToastTime = System.currentTimeMillis();
