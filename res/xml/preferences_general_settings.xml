@@ -51,7 +51,7 @@
             android:summary="@string/PreferenceHomeButtonSetDetail"
             android:title="@string/PreferenceHomeButtonSetText" android:defaultValue="false"/>
     </PreferenceCategory>
-    <PreferenceCategory
+    <PreferenceCategory android:title="@string/PreferenceCategoryFullScreenTitle"><ListPreference android:defaultValue="RIGHT" android:entries="@array/PreferenceBubblePositionEntries" android:entryValues="@array/PreferenceBubblePositionValues" android:key="PREFERENCE_BUBBLE_POSITION" android:summary="@string/PreferenceBubblePositionSummary" android:title="@string/PreferenceBubblePositionTitle" /><EditTextPreference android:defaultValue="3" android:key="PREFERENCE_TOOLBARS_AUTOHIDE_DURATION" android:numeric="integer" android:summary="@string/PreferenceToolbarsAutoHideDurationSummary" android:title="@string/PreferenceToolbarsAutoHideDurationTitle" /></PreferenceCategory><PreferenceCategory
         android:key="PREFERENCE_CATEGORY_TABLET_UI"
         android:title="@string/PreferenceCategoryUITitle" >
         <ListPreference
@@ -72,20 +72,7 @@
             android:key="PREFERENCE_UI_TYPE"
             android:summary="@string/PreferenceUITypeSummary"
             android:title="@string/PreferenceUITypeTitle" />
-        <ListPreference
-            android:defaultValue="RIGHT"
-            android:entries="@array/PreferenceBubblePositionEntries"
-            android:entryValues="@array/PreferenceBubblePositionValues"
-            android:key="PREFERENCE_BUBBLE_POSITION"
-            android:summary="@string/PreferenceBubblePositionSummary"
-            android:title="@string/PreferenceBubblePositionTitle" />
-
-        <EditTextPreference
-            android:defaultValue="3"
-            android:key="PREFERENCE_TOOLBARS_AUTOHIDE_DURATION"
-            android:numeric="integer"
-            android:summary="@string/PreferenceToolbarsAutoHideDurationSummary"
-            android:title="@string/PreferenceToolbarsAutoHideDurationTitle" />
+        
 
         <ListPreference
             android:defaultValue="BUTTONS"
@@ -94,6 +81,7 @@
             android:key="PREFERENCES_SWITCH_TABS_METHOD"
             android:summary="@string/PreferenceSwitchTabsMethodSummary"
             android:title="@string/PreferenceSwitchTabsMethodTitle" />
+        
     </PreferenceCategory>
     <PreferenceCategory
         android:key="PREFERENCE_CATEGORY_NEW_PHONE_UI"
@@ -113,5 +101,6 @@
             android:title="@string/PreferenceClosePanelOnNewTabTitle" />
         
     </PreferenceCategory>
+    
 
 </PreferenceScreen>

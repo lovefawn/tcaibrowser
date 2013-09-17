@@ -24,6 +24,8 @@
         android:id="@+id/WebViewContainer"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_above="@+id/BottomBar"
+        android:layout_below="@+id/TopBar"
         android:background="#dcdcdc"
         android:orientation="vertical" >
 
@@ -53,44 +55,23 @@
             android:padding="5dip"
             android:src="@drawable/ic_launcher" />
 
-        <ProgressBar
-            android:id="@+id/WebViewProgress"
-            style="?android:attr/progressBarStyleSmall"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_centerInParent="true"
-            android:layout_toLeftOf="@+id/UrlBar"
-            android:visibility="invisible" />
-
         <org.tcai.ui.views.PhoneUrlBar
             android:id="@+id/UrlBar"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_alignParentRight="true"
             android:layout_toRightOf="@+id/FaviconView" />
-        
+           <ProgressBar
+            android:id="@+id/WebViewProgress"
+            style="@android:style/Widget.Holo.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/UrlBar"
+            android:layout_marginLeft="0dip"
+            android:layout_marginRight="0dip"
+            android:layout_marginTop="-8dip"
+            android:indeterminate="false" />
     </RelativeLayout>
-    
-    <ImageView
-        android:id="@+id/PreviousTabView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_above="@+id/BottomBar"
-        android:contentDescription="@string/ContentDescriptionPreviousTabButton"
-        android:src="@drawable/ic_previous_tab" >
-    </ImageView>
-
-    <ImageView
-        android:id="@+id/NextTabView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_above="@+id/BottomBar"
-        android:contentDescription="@string/ContentDescriptionNextTabButton"
-        android:src="@drawable/ic_next_tab" >
-    </ImageView>
     
     <ImageView
         android:id="@+id/BubbleLeftView"
@@ -130,8 +111,36 @@
 			android:focusable="true" android:paddingLeft="8dip"
 			android:paddingRight="8dip" android:src="@drawable/ic_back"
 			android:layout_weight="1" />
+
+        <ImageView
+            android:id="@+id/BtnForward"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="?android:attr/selectableItemBackground"
+            android:contentDescription="@string/ContentDescriptionForwardButton"
+            android:focusable="true"
+            android:paddingBottom="8dip"
+            android:paddingLeft="8dip"
+            android:paddingRight="8dip"
+            android:paddingTop="8dip"
+            android:src="@drawable/ic_forward" />
+
+        <ImageView
+            android:id="@+id/BtnMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="?android:attr/selectableItemBackground"
+            android:contentDescription="@string/ContentDescriptionBookmarksButton"
+            android:focusable="true"
+            android:paddingBottom="8dip"
+            android:paddingLeft="8dip"
+            android:paddingRight="8dip"
+            android:paddingTop="8dip"
+            android:src="@drawable/ic_menu_1" />
 			
-		<ImageView android:id="@+id/BtnCloseTab"
+		<!-- <ImageView android:id="@+id/BtnCloseTab"
 			android:layout_width="wrap_content" android:layout_height="match_parent"
 			android:layout_gravity="center_vertical" android:background="?android:attr/selectableItemBackground"
 			android:paddingTop="8dip"
@@ -140,36 +149,37 @@
 			android:focusable="true" android:paddingLeft="8dip"
 			android:paddingRight="8dip" android:src="@android:drawable/ic_menu_close_clear_cancel"
 			android:layout_weight="1" />
-			
-		<ImageView android:id="@+id/BtnBookmarks"
-			android:layout_width="wrap_content" android:layout_height="match_parent"
-			android:layout_gravity="center_vertical" android:background="?android:attr/selectableItemBackground"
-			android:paddingTop="8dip"
-        	android:paddingBottom="8dip"
-			android:contentDescription="@string/ContentDescriptionBookmarksButton"
-			android:focusable="true" android:paddingLeft="8dip"
-			android:paddingRight="8dip" android:src="@drawable/ic_bookmarks"
-			android:layout_weight="1" />
-			
-		<ImageView android:id="@+id/BtnAddTab"
-			android:layout_width="wrap_content" android:layout_height="match_parent"
-			android:layout_gravity="center_vertical" android:background="?android:attr/selectableItemBackground"
-			android:paddingTop="8dip"
-        	android:paddingBottom="8dip"
-			android:contentDescription="@string/ContentDescriptionNewTabButton"
-			android:focusable="true" android:paddingLeft="8dip"
-			android:paddingRight="8dip" android:src="@android:drawable/ic_menu_add"
-			android:layout_weight="1" />
+			 -->
 
-		<ImageView android:id="@+id/BtnForward" android:layout_width="wrap_content"
-			android:layout_height="match_parent" android:layout_gravity="center_vertical"
-			android:background="?android:attr/selectableItemBackground"
-			android:paddingTop="8dip"
-        	android:paddingBottom="8dip"
-			android:contentDescription="@string/ContentDescriptionForwardButton"
-			android:focusable="true" android:paddingLeft="8dip"
-			android:paddingRight="8dip" android:src="@drawable/ic_forward"
-			android:layout_weight="1" />
+		<org.tcai.ui.components.SmallBadgedImageView
+		    android:id="@+id/BtnTabsList"
+		    android:layout_width="wrap_content"
+		    android:layout_height="match_parent"
+		    android:layout_gravity="center_vertical"
+		    android:layout_weight="1"
+		    android:background="?android:attr/selectableItemBackground"
+		    android:contentDescription="@string/ContentDescriptionTabsListButton"
+		    android:focusable="true"
+		    android:paddingBottom="8dip"
+		    android:paddingLeft="8dip"
+		    android:paddingRight="8dip"
+		    android:paddingTop="8dip"
+		    android:src="@drawable/ic_tabs_2" />
+
+		<ImageView
+		    android:id="@+id/BtnHome"
+		    android:layout_width="wrap_content"
+		    android:layout_height="match_parent"
+		    android:layout_gravity="center_vertical"
+		    android:layout_weight="1"
+		    android:background="?android:attr/selectableItemBackground"
+		    android:contentDescription="@string/ContentDescriptionNewTabButton"
+		    android:focusable="true"
+		    android:paddingBottom="8dip"
+		    android:paddingLeft="8dip"
+		    android:paddingRight="8dip"
+		    android:paddingTop="8dip"
+		    android:src="@drawable/ic_home_1" />
         
     </LinearLayout>
 

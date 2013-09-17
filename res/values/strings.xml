@@ -108,10 +108,10 @@
     <string name="PreferenceGeneralStartPageLimitTitle">起始页设置</string>
     <string name="PreferenceGeneralStartPageLimitSummary">设置起始页中显示的网站数量.</string>
     <string name="PreferenceCategoryUITitle">用户界面</string>
-    <string name="PreferenceBubblePositionTitle">气泡位置</string>
-    <string name="PreferenceBubblePositionSummary">允许显示工具栏的气泡位置.</string>
-    <string name="PreferenceBubblePositionRight">左侧</string>
-    <string name="PreferenceBubblePositionLeft">右侧</string>
+    <string name="PreferenceBubblePositionTitle">快捷图标位置</string>
+    <string name="PreferenceBubblePositionSummary">全屏时，自定义快捷图标的位置.</string>
+    <string name="PreferenceBubblePositionRight">右侧</string>
+    <string name="PreferenceBubblePositionLeft">左侧</string>
     <string name="PreferenceBubblePositionBoth">都可以</string>
 
     <string-array name="PreferenceBubblePositionEntries">
@@ -125,8 +125,9 @@
         <item>BOTH</item>
     </string-array>
 
-    <string name="PreferenceToolbarsAutoHideDurationTitle">工具栏显示时间</string>
-    <string name="PreferenceToolbarsAutoHideDurationSummary">设置工具栏的显示时间（s）.</string>
+    <string name="PreferenceCategoryFullScreenTitle">全屏设置</string>
+    <string name="PreferenceToolbarsAutoHideDurationTitle">自动隐藏时间</string>
+    <string name="PreferenceToolbarsAutoHideDurationSummary">设置全屏时，工具栏的自动隐藏时间（s）.</string>
     <string name="PreferenceSwitchTabsMethodTitle">切换标签页方式</string>
     <string name="PreferenceSwitchTabsMethodSummary">切换标签页设置.</string>
     <string name="PreferenceSwitchTabsMethodButtons">按钮</string>
@@ -324,6 +325,7 @@
     <string name="ContentDescriptionRightBubble">右侧气泡</string>
     <string name="ContentDescriptionBackButton">后退</string>
     <string name="ContentDescriptionCloseTabButton">关闭标签页</string>
+    <string name="ContentDescriptionTabsListButton">标签页列表</string>
     <string name="ContentDescriptionBookmarksButton">书签</string>
     <string name="ContentDescriptionNewTabButton">新标签页</string>
     <string name="ContentDescriptionForwardButton">前进</string>
@@ -464,12 +466,12 @@
         <item>NEVER</item>
     </string-array>
 
-    <string name="PreferenceUITypeTitle">UI类型</string>
-    <string name="PreferenceUITypeSummary">请选择UI类型.</string>
+    <string name="PreferenceUITypeTitle">主题设置</string>
+    <string name="PreferenceUITypeSummary">请选择您喜欢的主题.</string>
     <string name="PreferenceUITypeAuto">自动</string>
-    <string name="PreferenceUITypePhone">手机</string>
-    <string name="PreferenceUITypeLegacyPhone">电话（传统)</string>
-    <string name="PreferenceUITypeTablet">平板</string>
+    <string name="PreferenceUITypePhone">手机（流行）</string>
+    <string name="PreferenceUITypeLegacyPhone">手机（经典）</string>
+    <string name="PreferenceUITypeTablet">平板（大屏）</string>
 
     <string-array name="PreferenceUITypeEntries">
         <item>@string/PreferenceUITypeAuto</item>

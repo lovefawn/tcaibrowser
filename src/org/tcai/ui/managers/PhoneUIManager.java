@@ -107,7 +107,8 @@ public class PhoneUIManager extends BasePhoneUIManager {
 
 			@Override
 			public void onClick(View v) {
-				toggleFullScreen();
+				mTopBar.setVisibility(View.VISIBLE);
+				mExitFullScreen.setVisibility(View.GONE);
 			}
 		});
 
@@ -328,6 +329,11 @@ public class PhoneUIManager extends BasePhoneUIManager {
 				tabview.setFavicon(null);
 			}
 		}
+		
+		if(isFullScreen()){
+			mTopBar.setVisibility(View.GONE);
+			mExitFullScreen.setVisibility(View.VISIBLE);
+		}
 	}
 
 	@Override
@@ -391,7 +397,8 @@ public class PhoneUIManager extends BasePhoneUIManager {
 			}
 		}
 	}
-
+	
+	
 	@Override
 	public boolean onKeyBack() {
 		if (!super.onKeyBack()) {

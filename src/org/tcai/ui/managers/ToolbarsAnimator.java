@@ -22,14 +22,11 @@ import android.animation.ObjectAnimator;
 import android.animation.Animator.AnimatorListener;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 
 public class ToolbarsAnimator {
 
 	private ViewGroup mTopBar;
 	private ViewGroup mBottomBar;
-	private ImageView mShowPreviousTab;
-	private ImageView mShowNextTab;
 
 	private Animator mAnimator;
 
@@ -38,12 +35,9 @@ public class ToolbarsAnimator {
 
 	private boolean mToolbarsVisible;
 
-	public ToolbarsAnimator(ViewGroup topBar, ViewGroup bottomBar,
-			ImageView showPreviousTab, ImageView showNextTab) {
+	public ToolbarsAnimator(ViewGroup topBar, ViewGroup bottomBar) {
 		mTopBar = topBar;
 		mBottomBar = bottomBar;
-		mShowPreviousTab = showPreviousTab;
-		mShowNextTab = showNextTab;
 
 		mShowListener = new AnimatorListenerAdapter() {
 			@Override
@@ -51,8 +45,6 @@ public class ToolbarsAnimator {
 				mAnimator = null;
 				mTopBar.requestLayout();
 				mBottomBar.requestLayout();
-				mShowPreviousTab.requestLayout();
-				mShowNextTab.requestLayout();
 			}
 		};
 
@@ -62,8 +54,6 @@ public class ToolbarsAnimator {
 				mAnimator = null;
 				mTopBar.setVisibility(View.GONE);
 				mBottomBar.setVisibility(View.GONE);
-				mShowPreviousTab.setVisibility(View.GONE);
-				mShowNextTab.setVisibility(View.GONE);
 			}
 		};
 
@@ -80,14 +70,6 @@ public class ToolbarsAnimator {
 		mTopBar.setVisibility(View.VISIBLE);
 		mBottomBar.setVisibility(View.VISIBLE);
 
-		if (showPreviousTabButton) {
-			mShowPreviousTab.setVisibility(View.VISIBLE);
-		}
-
-		if (showNextTabButton) {
-			mShowNextTab.setVisibility(View.VISIBLE);
-		}
-
 		mTopBar.setAlpha(1);
 		mBottomBar.setAlpha(1);
 
@@ -101,15 +83,6 @@ public class ToolbarsAnimator {
 
 		b.with(ObjectAnimator.ofFloat(mTopBar, "translationY", 0));
 		b.with(ObjectAnimator.ofFloat(mBottomBar, "translationY", 0));
-
-		if (showPreviousTabButton) {
-			b.with(ObjectAnimator.ofFloat(mShowPreviousTab, "translationX", 0));
-		}
-
-		if (showNextTabButton) {
-			b.with(ObjectAnimator.ofFloat(mShowNextTab, "translationX",
-					mShowNextTab.getWidth(), 0));
-		}
 
 		animator.addListener(mShowListener);
 
@@ -137,11 +110,6 @@ public class ToolbarsAnimator {
 		b.with(ObjectAnimator.ofFloat(mTopBar, "alpha", 1));
 		b.with(ObjectAnimator.ofFloat(mTopBar, "translationY", 0,
 				-mTopBar.getHeight()));
-
-		b.with(ObjectAnimator.ofFloat(mShowPreviousTab, "translationX",
-				-mShowPreviousTab.getWidth()));
-		b.with(ObjectAnimator.ofFloat(mShowNextTab, "translationX", 0,
-				mShowNextTab.getWidth()));
 
 		animator.addListener(mHideListener);
 

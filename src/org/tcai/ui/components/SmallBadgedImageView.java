@@ -21,7 +21,7 @@ import android.graphics.Paint;
 import android.util.AttributeSet;
 import android.widget.ImageView;
 
-public class BadgedImageView extends ImageView {
+public class SmallBadgedImageView extends ImageView {
 
 	private static final float X_POSITON_RATIO = 52 / 96f;
 	private static final float Y_POSITON_RATIO = 64 / 96f;
@@ -30,15 +30,15 @@ public class BadgedImageView extends ImageView {
 
 	private Paint mPaint;
 
-	public BadgedImageView(Context context) {
+	public SmallBadgedImageView(Context context) {
 		this(context, null);
 	}
 
-	public BadgedImageView(Context context, AttributeSet attrs) {
+	public SmallBadgedImageView(Context context, AttributeSet attrs) {
 		this(context, attrs, 0);
 	}
 
-	public BadgedImageView(Context context, AttributeSet attrs, int defStyle) {
+	public SmallBadgedImageView(Context context, AttributeSet attrs, int defStyle) {
 		super(context, attrs, defStyle);
 
 		mValue = 0;
@@ -47,7 +47,7 @@ public class BadgedImageView extends ImageView {
 		mPaint.setColor(0xFFC8C8C8);
 		mPaint.setTextAlign(Paint.Align.CENTER);
 		mPaint.setFakeBoldText(true);
-		mPaint.setTextSize(15 * context.getResources().getDisplayMetrics().density);
+		mPaint.setTextSize(10 * context.getResources().getDisplayMetrics().density);
 
 	}
 
@@ -63,7 +63,7 @@ public class BadgedImageView extends ImageView {
 		}
 
 		canvas.drawText(text, X_POSITON_RATIO * getWidth(), Y_POSITON_RATIO
-				* getHeight(), mPaint);
+				* getHeight()-3*this.getResources().getDisplayMetrics().density, mPaint);
 	}
 
 	public void setValue(int value) {
